@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo Disney API</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/api.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Personajes de Disney</h1>
+        <p>Catálogo oficial de películas y series</p>
+
+        <form id="search-form" class="search-box" role="search" aria-label="Búsqueda de personajes">
+            <label for="search-input" class="visually-hidden">Buscar personaje por nombre</label>
+            <input id="search-input" type="text" placeholder="Ej: Mickey, Donald, Hercules..." />
+            <button id="search-button" type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <main>
+        <div id="status-container" role="status" aria-live="polite">
+            <p id="results-count" class="results-count"></p>
+            <p id="message"></p>
+        </div>
+
+        <div id="spinner" class="spinner" hidden aria-label="Cargando contenido"></div>
+
+        <section id="content" aria-label="Lista de personajes"></section>
+
+        <nav id="pagination" class="pagination" aria-label="Paginación de resultados">
+            <button id="prev" type="button">Anterior</button>
+            <span id="page-number"></span>
+            <button id="next" type="button">Siguiente</button>
+        </nav>
+    </main>
+</body>
+
+</html>
